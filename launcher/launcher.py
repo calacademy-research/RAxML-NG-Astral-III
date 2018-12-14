@@ -61,7 +61,7 @@ def launch_processes(process_file_list):
     print "Batch contains:", process_file_list
     pids = []
     for cur_file in process_file_list:
-        pids.append(launch_processes(cur_file))
+        pids.append(launch_process(cur_file))
 
     for pid in pids:
         pid.wait()
