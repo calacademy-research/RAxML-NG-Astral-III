@@ -58,6 +58,7 @@ def launch_process(file_with_path):
     return pid
 
 def launch_processes(process_file_list):
+    print "Batch contains:", process_file_list
     pids = []
     for cur_file in process_file_list:
         pids.append(launch_processes(cur_file))
@@ -73,6 +74,7 @@ def pop_n(n, list):
     return ret_val
 
 def do_runs(file_list):
+    print "Processing", len(file_list), "files...."
     while len(file_list) > 0:
         launch_processes(pop_n(target_process_count, file_list))
 
