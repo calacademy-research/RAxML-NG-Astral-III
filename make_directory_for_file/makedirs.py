@@ -11,12 +11,13 @@ if (len(sys.argv) == 1):
     sys.exit(1)
 
 print ("Searching for files with pattern: " + sys.argv[1])
+print ("Adding marker:", sys.argv[2])
 
 listing = glob.glob(sys.argv[1])
 pwd = os.getcwd()
 for path in listing:
     print path
-    dirname = path.split('/')[-1].split('.')[0]
+    dirname = path.split('/')[-1].split('.')[0] + sys.argv[2]
     try:
         os.mkdir(dirname, 0755)
     except OSError, e:
