@@ -1,2 +1,2 @@
-# tool-examples
-Tools that may not be fully refined - they can serve as good examples and could be generalized.
+# Parallelization of RAxML-NG for Astral-III input
+Scripts that partially automate the set up and running of Astral-III on mutithreaded servers.
